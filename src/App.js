@@ -9,14 +9,15 @@ import {
 
 import MainHomepage from './components/homepage/main-homepage.js';
 import Home from './components/accountpage/home.js';
+import CreatePin from './components/accountpage/createPin.js';
+import UpdatePin from './components/accountpage/updatePin.js';
 function App() {
   return (
     <div className="App">
       <Router>
-        {/* <MainHomepage/> */}
         <Routes>
           <Route path = "/" element = {<MainHomepage/>} />
-          <Route path="/dashboard/*" element={<PrivateRoutes />} />
+          <Route path="/account/*" element={<PrivateRoutes />} />
         </Routes>
       </Router>
     </div>
@@ -35,16 +36,8 @@ function PrivateRoutes() {
   return (
     <Routes>
       <Route path="home" element={<Home />} />
-      {/* <Route path="assign-duty" element={<AssignDuty />} />
-      <Route path="create-session" element={<CreateSession />} />
-      <Route path="sos" element={<SOS />} />
-      <Route path="onboarding" element={<Onboarding />} />
-      <Route path="post-work-notifications" element={<WorkNotifs />} />
-      <Route path="supervision" element={<Supervision />} />
-      <Route path="analytics" element={<Analytics />} />
-      <Route path="delete-users" element={<DeleteUser />} />
-      <Route path="delete-sessions" element={<DeleteSession />} />
-      <Route path="admin-registration" element={<AdminReg />} /> */}
+      <Route path="create-pin" element={<CreatePin />} />
+      <Route path="update-pin" element={<UpdatePin />} />
     </Routes>
   );
 }

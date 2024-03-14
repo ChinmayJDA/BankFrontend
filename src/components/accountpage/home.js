@@ -1,7 +1,8 @@
 import React from 'react';
+import axios from 'axios'; 
 import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
-import AccountDetails from '../../assets/Images/accountImages/AccountDetails.webp';
+
 import CheckPin from '../../assets/Images/accountImages/CheckPin.webp'; 
 import CreatePin from '../../assets/Images/accountImages/CreatePin.png';
 import UpdatePin from '../../assets/Images/accountImages/UpdatePin.png'; 
@@ -15,6 +16,26 @@ const Home = () => {
     balance: '$5000',
     branch: 'Main Branch',
   };
+  const checkPin = async () => {
+    try {
+      // Make API call to check pin
+      // For simulation purposes, assuming the pin is created
+      const pinCreated = true;
+      
+      // Check if pin is created
+      if (pinCreated) {
+        // If pin is created, log success message
+        console.log('Pin is created');
+      } else {
+        // If pin is not created, log failure message
+        console.log('Pin is not created');
+      }
+    } catch (error) {
+      // Handle error if API call fails
+      console.error('Error checking pin:', error);
+    }
+  };
+  
 
   return (
     <div className='home-outer home-overflow'>
@@ -37,16 +58,14 @@ const Home = () => {
             </div>
             {/* Boxes for Check Pin, Create Pin, and Update Pin */}
             <div className='center'>
-              <div className='home-box'>
-                <Link to='/dashboard/create-session' style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className='box-content'>
-                    <img src={CheckPin} alt='Check Pin' className='box-inner-img' />
-                    <div className='box-text'>Check Pin</div>
-                  </div>
-                </Link>
+              <div className='home-box' onClick={checkPin} style={{ cursor: 'pointer' }}>
+                <div className='box-content'>
+                  <img src={CheckPin} alt='Check Pin' className='box-inner-img' />
+                  <div className='box-text'>Check Pin</div>
+                </div>
               </div>
               <div className='home-box'>
-                <Link to='/dashboard/assign-duty' style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to='/account/create-pin' style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className='box-content'>
                     <img src={CreatePin} alt='Create Pin' className='box-inner-img' />
                     <div className='box-text'>Create Pin</div>
@@ -54,7 +73,7 @@ const Home = () => {
                 </Link>
               </div>
               <div className='home-box'>
-                <Link to='/dashboard/supervision' style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to='/account/update-pin' style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className='box-content'>
                     <img src={UpdatePin} alt='Update Pin' className='box-inner-img' />
                     <div className='box-text'>Update Pin</div>
