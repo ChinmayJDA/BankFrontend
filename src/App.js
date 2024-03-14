@@ -7,16 +7,14 @@ import {
   Link
 } from 'react-router-dom';
 
-import Home from './components/homepage/Home';
-import Navbar from './components/homepage/Navbar';
+import MainHomepage from './components/homepage/main-homepage.js';
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
-        <Home/>
+        <MainHomepage/>
+  
         <Routes>
-
           {/* <Route path="/login" element={<Login showAlert={showAlert}/>} />
           <Route path="/register" element={<Register />} /> */}
         </Routes>
