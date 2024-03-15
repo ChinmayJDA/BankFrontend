@@ -59,3 +59,8 @@
 .home-box-account {
   margin-top: -50px; 
 }
+.custom-button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
