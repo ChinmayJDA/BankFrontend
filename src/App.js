@@ -13,7 +13,7 @@ import Navbar from './components/homepage/Navbar';
 import Transaction from './components/Transaction/Transaction';
 
 import MainHomepage from './components/homepage/main-homepage.js';
-import Home from './components/accountpage/home.js';
+import AccountHome from './components/accountpage/home.js';
 import CreatePin from './components/accountpage/createPin.js';
 import UpdatePin from './components/accountpage/updatePin.js';
 function App() {
@@ -40,7 +40,7 @@ function PrivateRoutes() {
 
   return (
     <Routes>
-      <Route path="home" element={<Home />} />
+      <Route path="home" element={<AccountHome />} />
       <Route path="create-pin" element={<CreatePin />} />
       <Route path="update-pin" element={<UpdatePin />} />
     </Routes>
