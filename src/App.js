@@ -9,7 +9,8 @@ import {
 
 // import Home from './components/homepage/Home';
 // import Navbar from './components/homepage/Navbar';
-
+import Login from './components/homepage/login.js';
+import Register from './components/homepage/register.js';
 
 import MainHomepage from './components/homepage/main-homepage.js';
 import Home from './components/accountpage/home.js';
@@ -33,6 +34,8 @@ function App() {
       <Router>
         <Routes>
           <Route path = "/" element = {<MainHomepage/>} />
+          <Route path = "/login" element = {<Login />} />
+          <Route path = "/register" element = {<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/account/*" element={<PrivateRoutes />} />
           <Route path="/transaction" element={<Transaction/>} />
@@ -59,7 +62,7 @@ function PrivateRoutes() {
 
   return (
     <Routes>
-      <Route path="home" element={<Home />} />
+      <Route path="" element={<Home />} />
       <Route path="create-pin" element={<CreatePin />} />
       <Route path="update-pin" element={<UpdatePin />} />
       
