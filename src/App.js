@@ -7,6 +7,11 @@ import {
   Link
 } from 'react-router-dom';
 
+import Home from './components/homepage/Home';
+import Navbar from './components/homepage/Navbar';
+
+import Transaction from './components/Transaction/Transaction';
+
 import MainHomepage from './components/homepage/main-homepage.js';
 import Home from './components/accountpage/home.js';
 import CreatePin from './components/accountpage/createPin.js';
