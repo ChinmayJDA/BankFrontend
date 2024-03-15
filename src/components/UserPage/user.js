@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import Dashboard from '../dashboard/dashboard';
+
 import '../../assets/css/home.css';
 
 const User = () => {
@@ -13,6 +16,9 @@ const User = () => {
   };
 
   return (
+    <div>
+      <Dashboard />
+    
     <div className='home-outer home-overflow'>
       <div className='main'>
         <div className='main-in'>
@@ -42,6 +48,7 @@ const User = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

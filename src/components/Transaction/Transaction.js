@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Dashboard from '../dashboard/dashboard';
+
 import Deposit from '../../assets/Images/TransactionImages/Deposit.png';
 import Withdraw from '../../assets/Images/TransactionImages/Withdraw.png';
 import SendMoney from '../../assets/Images/TransactionImages/SendMoney.png'; 
@@ -8,6 +10,8 @@ import '../../assets/css/transaction.css'
 
 const Transaction = (props) => {
   return (
+    <div>
+      <Dashboard/>
     <div className='home-outer home-overflow'> {/* Apply similar outer container classes */}
       <div className='main'>
         <div className='main-in'>
@@ -36,6 +40,7 @@ const Transaction = (props) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

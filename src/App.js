@@ -24,12 +24,16 @@ import SendMoney from './components/Transaction/SendMoney.js';
 import User from './components/UserPage/user.js';
 import UpdateUser from './components/UserPage/updateUser.js';
 
+import History from './components/history/history.js';
+
+import Dashboard from './components/dashboard/dashboard.js';
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path = "/" element = {<MainHomepage/>} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/account/*" element={<PrivateRoutes />} />
           <Route path="/transaction" element={<Transaction/>} />
           <Route path="/transaction/deposit" element={<Deposit/>} />
@@ -37,6 +41,7 @@ function App() {
           <Route path="transaction/send-money" element={<SendMoney/>}/>
           <Route path="/user" element={<User/>}/>
           <Route path="/user/update" element={<UpdateUser/>}/>
+          <Route path="/transaction/history" element = {<History/>} />
         </Routes>
       </Router>
     </div>
