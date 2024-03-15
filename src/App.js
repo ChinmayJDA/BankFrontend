@@ -9,12 +9,15 @@ import {
 
 import Home from './components/homepage/Home';
 import Navbar from './components/homepage/Navbar';
+
+import Transaction from './components/Transaction/Transaction';
+
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
-        <Home/>
+        {/* <Navbar/>
+        <Home/> */}
         <Routes>
 
           {/* <Route path="/login" element={<Login showAlert={showAlert}/>} />
