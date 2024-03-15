@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
 
+import Dashboard from '../dashboard/dashboard';
+
 import CheckPin from '../../assets/Images/accountImages/CheckPin.webp'; 
 import CreatePin from '../../assets/Images/accountImages/CreatePin.png';
 import UpdatePin from '../../assets/Images/accountImages/UpdatePin.png'; 
@@ -38,6 +40,8 @@ const Home = () => {
   
 
   return (
+    <div>
+      <Dashboard />
     <div className='home-outer home-overflow'>
       <div className='main'>
         <div className='main-in'>
@@ -84,6 +88,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
