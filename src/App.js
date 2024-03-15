@@ -12,20 +12,38 @@ import Navbar from './components/homepage/Navbar';
 
 import Transaction from './components/Transaction/Transaction';
 
+import MainHomepage from './components/homepage/main-homepage.js';
+import Home from './components/accountpage/home.js';
+import CreatePin from './components/accountpage/createPin.js';
+import UpdatePin from './components/accountpage/updatePin.js';
 function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Navbar/>
-        <Home/> */}
         <Routes>
-
-          {/* <Route path="/login" element={<Login showAlert={showAlert}/>} />
-          <Route path="/register" element={<Register />} /> */}
+          <Route path = "/" element = {<MainHomepage/>} />
+          <Route path="/account/*" element={<PrivateRoutes />} />
         </Routes>
       </Router>
     </div>
   );
 }
 
+
+// PrivateRoutes component to handle the authenticated routes
+function PrivateRoutes() {
+  // const { adminId } = useContext(AdminIdContext);
+
+  // if (!adminId) {
+  //   return <Navigate to="/" />;
+  // } 
+
+  return (
+    <Routes>
+      <Route path="home" element={<Home />} />
+      <Route path="create-pin" element={<CreatePin />} />
+      <Route path="update-pin" element={<UpdatePin />} />
+    </Routes>
+  );
+}
 export default App;
