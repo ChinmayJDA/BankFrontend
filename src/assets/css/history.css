@@ -7,7 +7,7 @@
   }
   
   .transaction-box {
-    width: 300px; /* Adjust width as needed */
+    width: 40%; /* Adjust width as needed */
     padding: 20px;
     background-color: rgba(69, 68, 68, 0.7); /* Fully transparent */
     border-radius: 20px;
