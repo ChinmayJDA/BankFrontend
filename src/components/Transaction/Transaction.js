@@ -19,19 +19,19 @@ const Transaction = (props) => {
             {/* Boxes for Deposit, Withdraw, and Send Money */}
             <div className='center' style={{ display: 'flex', gap: '20px' }}> {/* Use flexbox for horizontal alignment and add gap */}
               <div className='home-box' style={{ width: '200px', height: '200px' }}> {/* Set width and height for bigger boxes */}
-                <Link to="/transaction/deposit" className="box-content">
+                <Link to="/dashboard/transaction/deposit" className="box-content">
                   <img src={Deposit} alt='Deposit' className='box-inner-img' />
                   <div className='box-text'>Deposit Money</div>
                 </Link>
               </div>
               <div className='home-box' style={{ width: '200px', height: '200px' }}> {/* Set width and height for bigger boxes */}
-                <Link to="/transaction/withdraw" className="box-content">
+                <Link to="/dashboard/transaction/withdraw" className="box-content">
                   <img src={Withdraw} alt='Withdraw' className='box-inner-img' />
                   <div className='box-text'>Withdraw Money</div>
                 </Link>
               </div>
               <div className='home-box' style={{ width: '200px', height: '200px' }}> {/* Set width and height for bigger boxes */}
-                <Link to="/transaction/send-money" className="box-content">
+                <Link to="/dashboard/transaction/send-money" className="box-content">
                   <img src={SendMoney} alt='Check Pin' className='box-inner-img' />
                   <div className='box-text'>Send Money</div>
                 </Link>

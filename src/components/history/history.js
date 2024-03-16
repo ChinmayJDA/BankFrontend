@@ -1,79 +1,58 @@
 import React from 'react';
-
+import { useState } from 'react';
+import axios from 'axios';
+import { useEffect } from 'react';
 import Dashboard from '../dashboard/dashboard';
 import '../../assets/css/history.css'; // Import your CSS file for transaction history styling
 
 const History = () => {
-  // Mock sample transaction data
-  const transactions = [
-    {
-      amount: '$100',
-      type: 'Deposit',
-      date: '2024-03-15',
-      sourceAccount: '1234567890',
-      targetAccount: '9876543210'
-    },
-    {
-      amount: '$50',
-      type: 'Withdrawal',
-      date: '2024-03-14',
-      sourceAccount: '9876543210',
-      targetAccount: '1234567890'
-    },
-    {
-        amount: '$50',
-        type: 'Withdrawal',
-        date: '2024-03-14',
-        sourceAccount: '9876543210',
-        targetAccount: '1234567890'
-      },
-      {
-        amount: '$50',
-        type: 'Withdrawal',
-        date: '2024-03-14',
-        sourceAccount: '9876543210',
-        targetAccount: '1234567890'
-      },
-      {
-        amount: '$50',
-        type: 'Withdrawal',
-        date: '2024-03-14',
-        sourceAccount: '9876543210',
-        targetAccount: '1234567890'
-      },
-      {
-        amount: '$50',
-        type: 'Withdrawal',
-        date: '2024-03-14',
-        sourceAccount: '9876543210',
-        targetAccount: '1234567890'
-      },
-      {
-        amount: '$50',
-        type: 'Withdrawal',
-        date: '2024-03-14',
-        sourceAccount: '9876543210',
-        targetAccount: '1234567890'
-      },
-    // Add more sample transactions as needed
-  ];
+  const [transaction, settransaction ] = useState([]);
+  useEffect(()=>{
+    const fetchTransaction= async()=>{
+
+      const config = {
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        }
+      };
+
+      axios.get('http://localhost:8080/api/account/transactions', config)
+        .then(response => {
+          const transformedTransactions = response.data.map(transaction => ({
+            amount: `$${transaction.amount}`,
+            type: transaction.transaction_type,
+            date: new Date(transaction.transaction_date).toISOString().split('T')[0],
+            sourceAccount: transaction.sourceAccountNumber,
+            targetAccount: transaction.targetAccountNumber === 'N/A' ? 'N/A' : transaction.targetAccountNumber
+          }));
+          settransaction(transformedTransactions);
+          console.log(transaction);
+        }) 
+        .catch(error => {
+          //alert danger
+          console.error(error);
+        });
+
+    }
+    fetchTransaction();
+  }, []);
 
   return (
-    <div>
-        <Dashboard />
-    <div className="transaction-history-container">
-      
-      {transactions.map((transaction, index) => (
-        <div key={index} className="transaction-box">
-          <p><strong>Amount:</strong> {transaction.amount}</p>
-          <p><strong>Transaction Type:</strong> {transaction.type}</p>
-          <p><strong>Transaction Date:</strong> {transaction.date}</p>
-          <p><strong>Source Account Number:</strong> {transaction.sourceAccount}</p>
-          <p><strong>Target Account Number:</strong> {transaction.targetAccount}</p>
-        </div>
-      ))}
-    </div>
-    </div>
+    <>
+      <Dashboard />
+      <div className="transaction-history-container">
+        
+        {transaction.map((data, index) => (
+          <div key={index} className="transaction-box">
+            <p><strong>Amount:</strong> {data.amount}</p>
+            <p><strong>Transaction Type:</strong> {data.type}</p>
+            <p><strong>Transaction Date:</strong> {data.date}</p>
+            <p><strong>Source Account Number:</strong> {data.sourceAccount}</p>
+            <p><strong>Target Account Number:</strong> {data.targetAccount}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
