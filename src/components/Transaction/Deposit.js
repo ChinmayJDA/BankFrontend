@@ -9,7 +9,7 @@ const Deposit = (props) => {
   let history = useNavigate();
 
   const [amountRequest, setamountRequest] = useState({pin: "", amount: ""});
-
+  
   const handleSubmit = async(e) => {
     e.preventDefault();
     const config = {
