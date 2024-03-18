@@ -1,0 +1,58 @@
+.home-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .home-box-pin {
+    margin-top: 70px;
+    width: 480px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: rgba(69, 68, 68, 0.7); /* Fully transparent */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(59, 58, 58, 0.1);
+  }
+  
+  .home-box-pin h2 {
+    text-align: center;
+    color: #fff;
+  }
+  .box-text {
+    color: #fff;
+    margin-top: 10px;
+    text-decoration: none; 
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #04093c; /* Adjust button color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Adjust button hover color as needed */
+  }

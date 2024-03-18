@@ -1,12 +1,14 @@
 import React from 'react'
 import img2 from '../../assets/Images/img2.jpg'
 import cust2 from '../../assets/Images/cust2.jpg'
+import { Link } from 'react-router-dom'
+
 const Home = (props) =>{
     return (<>
         <header>
             <div class="hero-text-box">
                 <h1>Welcome to Piggy Bank </h1>
-                <a class="btn btn-full" href="#">Dashboard</a>
+                <Link class="btn btn-full" to="/login">Dashboard</Link>
                 <a class="btn btn-ghost" href="#">Know More</a>
             </div>
         </header>

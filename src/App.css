@@ -1,9 +1,14 @@
-*{
+/* Reset styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+
 html{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('assets/Images/img1.jpg');
+  background-size: cover;
   background-color: #ffffff;
   color: #555;
   font-family: sans-serif;
@@ -12,9 +17,13 @@ html{
   text-rendering: optimizeLegibility; /* increase the speed of webpage to be loaded*/
   font-family: 'Lato', sans-serif;
 }
+
+
 .row{
+  
   max-width: 1140px;
   margin: 0 auto;
+  /* position: relative; */
 }
 header{
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('assets/Images/img1.jpg');
