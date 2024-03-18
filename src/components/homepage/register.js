@@ -10,7 +10,7 @@ function Register(props) {
   const [credentials, setcredentials] =useState({name: "", password : "", email: "", phone_number: "", address:""});
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/api/users/register', credentials)
+    axios.post('http://localhost:8082/User/api/users/register', credentials)
       .then(response => {
         props.showAlert("User Registered!","Success");
         history('/');

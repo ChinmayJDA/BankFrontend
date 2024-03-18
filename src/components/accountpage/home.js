@@ -19,7 +19,7 @@ const Account = (props) => {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
         }
       };
-      axios.get('http://localhost:8080/api/home/account', config)
+      axios.get('http://localhost:8082/User/api/home/account', config)
       .then(response => {
         setaccountDetails(response.data)
       })
@@ -37,7 +37,7 @@ const Account = (props) => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
       }
     };
-    axios.post('http://localhost:8080/api/account/pin/check',{}, config)
+    axios.post('http://localhost:8082/Transaction/api/account/pin/check',{}, config)
     .then(response => {
       console.log(response.data.hasPIN )
       if(response.data.hasPIN){

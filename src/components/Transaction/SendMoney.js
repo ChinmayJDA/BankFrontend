@@ -17,7 +17,7 @@ const SendMoney = (props) => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
       }
     };
-    axios.post('http://localhost:8080/api/account/fund-transfer', fundTransferRequest , config)
+    axios.post('http://localhost:8082/Transaction/api/account/fund-transfer', fundTransferRequest , config)
       .then(response => {
         console.log(response.data);
         props.showAlert("Amount transferred successfully","Success");

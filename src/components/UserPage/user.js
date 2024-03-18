@@ -17,7 +17,7 @@ const User = () => {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
         }
       };
-      axios.get('http://localhost:8080/api/home/user', config)
+      axios.get('http://localhost:8082/User/api/home/user', config)
       .then(response => {
         setuserDetails(response.data)
       })

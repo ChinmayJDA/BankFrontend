@@ -16,7 +16,7 @@ const CreatePin = (props) => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
       }
     };
-    axios.post('http://localhost:8080/api/account/pin/create', requestPin , config)
+    axios.post('http://localhost:8082/Transaction/api/account/pin/create', requestPin , config)
       .then(response => {
         console.log(response.data);
         props.showAlert("Pin Generated Successfully","Success");

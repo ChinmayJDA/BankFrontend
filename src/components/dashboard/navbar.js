@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = (props) => {
-  const handleLogout = () => {
+
+  const handleLogout = async() => {
     localStorage.removeItem('token');
     props.showAlert("Logged out", "Success");
   };

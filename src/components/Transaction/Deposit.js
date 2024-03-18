@@ -17,7 +17,7 @@ const Deposit = (props) => {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
       }
     };
-    axios.post('http://localhost:8080/api/account/deposit', amountRequest , config)
+    axios.post('http://localhost:8082/Transaction/api/account/deposit', amountRequest , config)
       .then(response => {
         // console.log(response.data);
         props.showAlert("Amount deposited Successfully","Success")

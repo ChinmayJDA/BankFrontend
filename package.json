@@ -2,6 +2,7 @@
   "name": "bankfrontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8082",
   "dependencies": {
     "@coreui/react": "^4.11.1",
     "@testing-library/jest-dom": "^5.17.0",

@@ -12,8 +12,10 @@ function Login(props) {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/api/users/login', credentials)
+    // console.log(credentials);
+    axios.post('http://localhost:8082/User/api/users/login', credentials)
       .then(response => {
+        // console.log(response);
         localStorage.setItem('token',response.data.token);
         history('/dashboard');
         props.showAlert("Logged in successfully", "Success");

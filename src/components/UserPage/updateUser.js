@@ -16,7 +16,7 @@ const UpdateUser = (props) => {
       }
     };
     e.preventDefault();
-    axios.put('http://localhost:8080/api/users/update', credentials, config)
+    axios.put('http://localhost:8082/Transaction/api/users/update', credentials, config)
       .then(response => {
         props.showAlert("Updated Successfully","Success")
         history('/dashboard/user');
