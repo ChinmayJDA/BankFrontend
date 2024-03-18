@@ -1,0 +1,51 @@
+nav {
+    background-color: rgba(69, 68, 68, 0.7); /* Fully transparent */
+    padding: 20px 0;
+  }
+  
+  
+  .navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px; /* Adjust this value as needed */
+  }
+  
+  .navbar li:last-child {
+    margin-right: 0;
+  }
+  
+  .row {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav li {
+    margin-right: 20px; /* Adjust the spacing between list items */
+  }
+  
+  .main-nav li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+  }
+  
+  .main-nav li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  
