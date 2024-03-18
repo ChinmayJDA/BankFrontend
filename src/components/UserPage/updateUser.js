@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router';
 import '../../assets/css/updateuser.css';
 import Dashboard from '../dashboard/dashboard';
 
+import Navbar from '../dashboard/navbar';
+
 const UpdateUser = (props) => {
   let history = useNavigate();
   const [credentials, setcredentials] = useState({ name: "", email: "", phone_number: "", address: "" });
@@ -32,7 +34,7 @@ const UpdateUser = (props) => {
   }
   return (
     <>
-      <Dashboard />
+      <Navbar />
       <div className='home-box-container'>
         <div className='home-box-pin'>
           <h2>Update User </h2>

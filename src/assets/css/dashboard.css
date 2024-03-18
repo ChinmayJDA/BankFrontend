@@ -11,7 +11,7 @@ nav {
   }
   
   .navbar li {
-    margin-right: 20px; /* Adjust this value as needed */
+    margin-right: 0px; /* Adjust this value as needed */
   }
   
   .navbar li:last-child {
@@ -36,7 +36,7 @@ nav {
   }
   
   .main-nav li {
-    margin-right: 20px; /* Adjust the spacing between list items */
+    margin-right: 0px; /* Adjust the spacing between list items */
   }
   
   .main-nav li:last-child {

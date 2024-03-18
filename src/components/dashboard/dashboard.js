@@ -14,12 +14,15 @@ const Dashboard = (props) => {
   };
 
   return (
-    <div className="dashboard">
-      <Navbar showAlert={props.showAlert} />
-      <News />
-      {/* <Carousel /> */}
-      {/* Your dashboard content goes here */}
-    </div>
+    <>
+    <Navbar/>
+      <div className="dashboard">
+        <News />
+        {/* <Carousel /> */}
+        {/* Your dashboard content goes here */}
+      </div>
+    </>
+    
   );
 };
 

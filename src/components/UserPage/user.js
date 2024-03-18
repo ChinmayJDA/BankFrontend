@@ -5,6 +5,7 @@ import Dashboard from '../dashboard/dashboard';
 import Navbar from '../dashboard/navbar';
 import axios from 'axios';
 import '../../assets/css/home.css';
+import { whileStatement } from '@babel/types';
 
 const User = () => {
   const [userDetails,setuserDetails] = useState({name: "", email:"",address:"", phone_number : ""});
@@ -52,11 +53,13 @@ const User = () => {
             </div>
             {/* Box for Update Button */}
             <div className='center'>
-                <div className='home-box'>
+                {/* <div className='home-box'> */}
                     <Link to='/dashboard/user/update' style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <button className='custom-button' style={{ border: 'none' }}>Update</button>
+                        
+                        <button type='submit' style={{ backgroundColor: 'skyblue' }}>Update</button>
+
                     </Link>
-                 </div>
+                 {/* </div> */}
             </div>
           </div>
         </div>
