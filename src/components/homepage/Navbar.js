@@ -10,18 +10,19 @@ import {
 const Navbar = (props) => {
     return(
         <>
-            <nav>
-                <div class="row">
-                {/* <img class="logo" src={logo} alt="logo-img" /> */}
-                <ul class="main-nav">
-                    <li> <Link to="/">Home</Link></li>
-                    <li> <Link to="/login">Log in</Link></li>
-                    <li> <Link to="/register">Register</Link></li>
-                    <li> <Link to="/">Contact Us</Link></li>
-                    <li> <Link to="/">Customer Feedback</Link></li>
-                </ul>
-                </div>
-            </nav>
+        <nav>
+    <div class="row">
+        <ul class="main-nav">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/login">Log in</Link></li>
+            <li><Link to="/register">Register</Link></li>
+            <li><a href="#section-testi">Customer Feedback</a></li>
+            <li><a href="#summaryy">About Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+          
         </>
     )
 }
