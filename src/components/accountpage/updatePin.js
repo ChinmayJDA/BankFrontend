@@ -3,7 +3,7 @@ import '../../assets/css/pin.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import Dashboard from '../dashboard/dashboard';
-
+import Navbar from '../dashboard/navbar';
 const UpdatePin = (props) => {
   let history =useNavigate();
   const [updatePin, setupdatePin] =useState({oldPin:"", newPin:"", password:""})
@@ -36,7 +36,7 @@ const UpdatePin = (props) => {
 
   return (
     <>
-    <Dashboard/>
+    <Navbar/>
     <div className='home-box-container'>
       <div className='home-box-pin'>
         <h2>Update Pin</h2>

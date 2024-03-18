@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import axios from 'axios';
 import '../../assets/css/pin.css'
 import Dashboard from '../dashboard/dashboard';
+import Navbar from '../dashboard/navbar';
 const CreatePin = (props) => {
   let history = useNavigate();
   const [requestPin, setrequestPin] = useState({ pin: "", password: ""});
@@ -36,7 +37,7 @@ const CreatePin = (props) => {
 
   return (
     <>
-      <Dashboard/>
+      <Navbar/>
       <div className='home-box-container'>
       <div className='home-box-pin'>
         <h2>Generate Pin</h2>

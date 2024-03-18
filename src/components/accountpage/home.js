@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
 import { useState, useEffect } from 'react';
 import Dashboard from '../dashboard/dashboard';
+import Navbar from '../dashboard/navbar';
 
 import CheckPin from '../../assets/Images/accountImages/CheckPin.webp'; 
 import CreatePin from '../../assets/Images/accountImages/CreatePin.png';
@@ -54,7 +55,7 @@ const Account = (props) => {
 
   return (
     <div>
-      <Dashboard />
+      <Navbar />
     <div className='home-outer home-overflow'>
       <div className='main'>
         <div className='main-in'>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Dashboard from '../dashboard/dashboard';
+import Navbar from '../dashboard/navbar';
 
 import Deposit from '../../assets/Images/TransactionImages/Deposit.png';
 import Withdraw from '../../assets/Images/TransactionImages/Withdraw.png';
@@ -11,7 +12,7 @@ import '../../assets/css/transaction.css'
 const Transaction = (props) => {
   return (
     <div>
-      <Dashboard/>
+      <Navbar/>
     <div className='home-outer home-overflow'> {/* Apply similar outer container classes */}
       <div className='main'>
         <div className='main-in'>
