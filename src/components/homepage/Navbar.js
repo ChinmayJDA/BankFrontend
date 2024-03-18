@@ -14,11 +14,11 @@ const Navbar = (props) => {
                 <div class="row">
                 {/* <img class="logo" src={logo} alt="logo-img" /> */}
                 <ul class="main-nav">
-                    <li> <a href="#">Home</a></li>
+                    <li> <Link to="/">Home</Link></li>
                     <li> <Link to="/login">Log in</Link></li>
                     <li> <Link to="/register">Register</Link></li>
-                    <li> <a href="#">Contact Us</a></li>
-                    <li> <a href="#">Customer Feedback</a></li>
+                    <li> <Link to="/">Contact Us</Link></li>
+                    <li> <Link to="/">Customer Feedback</Link></li>
                 </ul>
                 </div>
             </nav>
