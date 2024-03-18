@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../assets/css/pin.css';
 import Dashboard from '../dashboard/dashboard';
+import Navbar from '../dashboard/navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 
@@ -37,7 +38,7 @@ const Deposit = (props) => {
   
   return (
     <>
-    <Dashboard/>
+    <Navbar/>
     <div className='home-box-container'>
       <div className='home-box-pin'>
         <h2>Deposit Money</h2>

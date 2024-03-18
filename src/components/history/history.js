@@ -3,7 +3,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
 import Dashboard from '../dashboard/dashboard';
-import '../../assets/css/history.css'; // Import your CSS file for transaction history styling
+import Navbar from '../dashboard/navbar';
+import '../../assets/css/history.css'; 
 
 const History = () => {
   const [transaction, settransaction ] = useState([]);
@@ -39,7 +40,7 @@ const History = () => {
 
   return (
     <>
-      <Dashboard />
+      <Navbar />
       <div className="transaction-history-container">
         
         {transaction.map((data, index) => (

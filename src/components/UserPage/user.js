@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Dashboard from '../dashboard/dashboard';
+import Navbar from '../dashboard/navbar';
 import axios from 'axios';
 import '../../assets/css/home.css';
 
@@ -29,7 +30,7 @@ const User = () => {
 
   return (
     <div>
-      <Dashboard />
+      <Navbar />
     
     <div className='home-outer home-overflow'>
       <div className='main'>
