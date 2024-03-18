@@ -5,6 +5,7 @@ import '../../assets/css/dashboard.css';
 // import Carousel from './Carousel.js';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './navbar.js'
+import { setUncaughtExceptionCaptureCallback } from 'process';
 const Dashboard = (props) => {
   // let history=useNavigate();
   const handleLogout = () => {
